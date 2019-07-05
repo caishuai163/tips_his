@@ -1,0 +1,14 @@
+.column, .columns { float: left; min-height: 1px; margin-bottom: 8px; padding: 0 18px; position: relative; }
+
+.row .one { width: 8.333%; }
+.row .two { width: 16.667%; }
+.row .three { width: 25%; }
+.row .four { width: 33.333%; }
+.row .five { width: 41.667%; }
+.row .six { width: 50%; }
+.row .seven { width: 58.333%; }
+.row .eight { width: 66.667%; }
+.row .nine { width: 75%; }
+.row .ten { width: 83.333%; }
+.row .eleven { width: 91.667%; }
+.row .twelve { width: 100%; }

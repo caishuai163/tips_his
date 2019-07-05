@@ -1,0 +1,12 @@
+1.源码
+	1.初始化(建立memcache client)
+	2.new 
+		创建一个distributeLock，成员为client，bllName（key值），ExpType（yichang类型，记录当前锁的异常状态）
+	3.weaklock(),加锁的方法，依靠memcache.add()的原子性，只能加一个锁。
+	 在锁等待超时的时候，抛出了一个超时异常。原来在这里是直接close()删key的，这里用自身ExpType记录一下异常，在关闭的时候判定不是这个异常再删key
+	4.strongLOck(),和weakLock类似，就是没有超时时间。
+	5.close(),在关闭的时候判定不是这个异常再删key,其他直接删除key，释放锁。
+2.使用
+	1.new distributeLock(),实际未加锁。
+	2.lock.weakLock(). 加锁，这里要注意的是，加锁和getSession()的位置，getSession()要尽量在锁的内部，以减少session的等待时间，提高效率。
+	3.lock.close()。一般都是隐式的去close，注意的是，在close的时候，可能是出现了锁抛出的异常，这时候证明操作已经是不安全的了，so，session的commit尽量在锁的外面去执行

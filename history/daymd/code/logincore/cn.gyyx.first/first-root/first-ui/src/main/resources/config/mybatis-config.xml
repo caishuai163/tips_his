@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 打印查询语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+	</settings>
+	<!-- 为实体类起别名 -->
+	<typeAliases>
+		<typeAlias alias="user" type="cn.gyyx.first.beans.User" />
+		<typeAlias alias="userinfo" type="cn.gyyx.first.beans.UserInfo" />
+	</typeAliases>
+
+
+	<!-- <environments default="test"> <environment id="test"> <transactionManager 
+		type="JDBC"></transactionManager> <dataSource type="POOLED"> <property name="driver" 
+		value="${jdbc.driverClassName}" /> <property name="url" value="${jdbc.testurl}" 
+		/> <property name="username" value="${jdbc.testusername}" /> <property name="password" 
+		value="${jdbc.testpassword}" /> </dataSource> </environment> </environments> -->
+	<mappers>
+		<mapper resource="mapper/UserMapper.xml" />
+		<mapper resource="mapper/UserInfoMapper.xml" />
+	</mappers>
+</configuration>
+
