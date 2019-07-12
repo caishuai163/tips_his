@@ -1,5 +1,3 @@
 [
-{"ip":"209.222.10.116","port":"10005","pwd":"xiaoma666","method":"aes-256-cfb"},
-{"ip":"209.222.10.116","port":"1","pwd":"xiaoma666","method":"aes-256-cfb"},
-{"ip":"209.222.10.116","port":"2","pwd":"xiaoma666","method":"aes-256-cfb"}
+{"ip":"209.222.10.116","port":"10005","pwd":"xiaoma666","method":"aes-256-cfb"}
 ]
