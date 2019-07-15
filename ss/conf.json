@@ -1,3 +1,1 @@
-[
-{"ip":"209.222.10.116","port":"10005","pwd":"xiaoma666","method":"aes-256-cfb"}
-]
+[{"ip":"127.0.0.1","port":"11101","pwd":"xiaoma666","method":"aes-256-cfb","portInt":11101}]
